@@ -6,5 +6,7 @@ import com.dazmon.application.entity.UserProfile;
 import java.util.List;
 
 public interface UserProfileDao extends BaseDao<UserProfile> {
-    public List<UserProfile> getUserProfileById(String id) throws Exception;
+    List<UserProfile> getUserProfileById(String id) throws Exception;
+
+    UserProfile getUserProfileRedis(String id) throws Exception;
 }

@@ -8,7 +8,11 @@
         <result column="realName" jdbcType="VARCHAR" property="realName" />
     </resultMap>
 
-    <select id="getUserProfileById" resultType="com.dazmon.application.entity.UserProfile" parameterType="java.util.Map">
+    <select id="getUserProfileById" resultType="com.dazmon.application.entity.UserProfile" parameterType="java.lang.String">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getUserProfileRedis" resultType="com.dazmon.application.entity.UserProfile" parameterType="java.lang.String">
         select * from user where id = #{id}
     </select>
 

@@ -31,4 +31,9 @@ public class UserProfileController {
         return userProfileService.getUserProfileById(id);
     }
 
+    @RequestMapping(value = "/getUserProfileRedis",method = RequestMethod.POST)
+    public UserProfile getUserProfileRedis(String id) throws Exception {
+        return userProfileService.getUserProfileRedis(id);
+    }
+
 }

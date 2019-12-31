@@ -19,4 +19,9 @@ public class UserProfileDaoImpl extends BaseDaoImpl<UserProfile> implements User
         return super.selectList(getMybatisMapperNamesapce().concat("getUserProfileById"),id);
     }
 
+    @Override
+    public UserProfile getUserProfileRedis(String id) throws Exception {
+        return super.selectOne(getMybatisMapperNamesapce().concat("getUserProfileRedis"),id);
+    }
+
 }
